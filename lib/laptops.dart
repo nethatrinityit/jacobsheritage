@@ -75,7 +75,7 @@ class _OnlyLaptopsState extends State<OnlyLaptops> {
                             child: Column(
                           //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            SizedBox(height: 15),
+                            const SizedBox(height: 15),
                             Container(
                               width: MediaQuery.of(context).size.width * 0.7,
                               child: Text(

@@ -1,0 +1,148 @@
+{
+    "projectId": "68c05f1a00194196d23b",
+    "endpoint": "https://nyc.cloud.appwrite.io/v1",
+    "projectName": "Trinity Laptops",
+    "settings": {
+        "services": {
+            "account": true,
+            "avatars": true,
+            "databases": true,
+            "locale": true,
+            "health": true,
+            "storage": true,
+            "teams": true,
+            "users": true,
+            "sites": true,
+            "functions": true,
+            "graphql": true,
+            "messaging": true
+        },
+        "auth": {
+            "methods": {
+                "jwt": true,
+                "phone": true,
+                "invites": true,
+                "anonymous": true,
+                "email-otp": true,
+                "magic-url": true,
+                "email-password": true
+            },
+            "security": {
+                "duration": 31536000,
+                "limit": 0,
+                "sessionsLimit": 10,
+                "passwordHistory": 0,
+                "passwordDictionary": false,
+                "personalDataCheck": false,
+                "sessionAlerts": false,
+                "mockNumbers": []
+            }
+        }
+    },
+    "sites": [
+        {
+            "$id": "68d38ea0000dc2643ec3",
+            "name": "My website",
+            "enabled": true,
+            "logging": true,
+            "framework": "flutter",
+            "timeout": 30,
+            "installCommand": "flutter pub get",
+            "buildCommand": "flutter build web --release -t lib/main.dart",
+            "outputDirectory": "./build/web",
+            "specification": "s-0.5vcpu-512mb",
+            "buildRuntime": "flutter-3.29",
+            "adapter": "static",
+            "fallbackFile": "",
+            "path": "sites/My website"
+        }
+    ],
+    "tablesDB": [
+        {
+            "$id": "68c0f7fe0032f24c9f66",
+            "name": "prodstore",
+            "enabled": true
+        }
+    ],
+    "tables": [
+        {
+            "$id": "products",
+            "$permissions": [
+                "create(\"any\")",
+                "read(\"any\")",
+                "update(\"any\")",
+                "delete(\"any\")"
+            ],
+            "databaseId": "68c0f7fe0032f24c9f66",
+            "name": "products",
+            "enabled": true,
+            "columns": [
+                {
+                    "key": "prodname",
+                    "type": "string",
+                    "required": true,
+                    "array": false,
+                    "size": 100,
+                    "default": null,
+                    "encrypt": false
+                },
+                {
+                    "key": "spec",
+                    "type": "string",
+                    "required": false,
+                    "array": false,
+                    "size": 250,
+                    "default": "",
+                    "encrypt": false
+                },
+                {
+                    "key": "price",
+                    "type": "string",
+                    "required": false,
+                    "array": false,
+                    "size": 10,
+                    "default": null,
+                    "encrypt": false
+                },
+                {
+                    "key": "imageUrls",
+                    "type": "string",
+                    "required": false,
+                    "array": true,
+                    "size": 150,
+                    "default": null,
+                    "encrypt": false
+                },
+                {
+                    "key": "category",
+                    "type": "string",
+                    "required": true,
+                    "array": false,
+                    "size": 15,
+                    "default": null,
+                    "encrypt": false
+                }
+            ],
+            "indexes": []
+        }
+    ],
+    "buckets": [
+        {
+            "$id": "68c1aadc00248675ed7c",
+            "$permissions": [
+                "create(\"any\")",
+                "read(\"any\")",
+                "update(\"any\")",
+                "delete(\"any\")"
+            ],
+            "fileSecurity": true,
+            "name": "Products",
+            "enabled": true,
+            "maximumFileSize": 50000000,
+            "allowedFileExtensions": [],
+            "compression": "none",
+            "encryption": true,
+            "antivirus": true
+        }
+    ]
+}

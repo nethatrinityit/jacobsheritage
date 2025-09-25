@@ -1,0 +1,22 @@
+{
+    "projectId": "68c9ae5a00322f6f93e3",
+    "endpoint": "https://nyc.cloud.appwrite.io/v1",
+    "sites": [
+        {
+            "$id": "68d38ea0000dc2643ec3",
+            "name": "my website",
+            "enabled": true,
+            "logging": true,
+            "framework": "flutter",
+            "timeout": 30,
+            "installCommand": "flutter pub get",
+            "buildCommand": "flutter build web --release -t lib/main.dart",
+            "outputDirectory": "./dist",
+            "specification": "s-1vcpu-512mb",
+            "buildRuntime": "node-22",
+            "adapter": "ssr",
+            "fallbackFile": "",
+            "path": "sites/documentation-template"
+        }
+    ]
+}
